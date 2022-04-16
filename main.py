@@ -20,7 +20,7 @@ root.resizable(False, False)
 
 e = tkinter.Entry(root, width=40, font=('Arial 12'), )
 eAbove = tkinter.Entry(root, width=40, font=('Arial 12'), )
-ee = tkinter.Entry(root, width=40)
+# ee = tkinter.Entry(root, width=40)
 
 eAbove.grid(row=0, column=0, columnspan=8)
 e.grid(row=1, column=0, columnspan=8)
@@ -126,11 +126,13 @@ def getResult():
                 eAbove.insert(0, "F")
 
 def inPowTwo():
+    eAbove.delete(0, tkinter.END)
     first = float(e.get())**2
     eAbove.insert(0, first)
     e.delete(0, tkinter.END)
 
 def sqrtOf():
+    eAbove.delete(0, tkinter.END)
     if float(e.get())<0:
         sqrtOfNegativeNum()
     else:
@@ -139,6 +141,7 @@ def sqrtOf():
         e.delete(0, tkinter.END)
 
 def oneDivided():
+    eAbove.delete(0, tkinter.END)
     if e.get()=="0":
         errorDivisionBy0()
     else:
@@ -200,7 +203,7 @@ button_false.grid(row=8, column=4, columnspan=4, sticky="WE")
 # e_A.grid(row=5, column=0, columnspan=1, )
 # e_B.grid(row=5, column=1, columnspan=1, )
 
-ee.grid(row=8, column=0, columnspan=8)
+# ee.grid(row=8, column=0, columnspan=8)
 
 button_1.grid(row=5, column=0, columnspan=2, sticky="WE")
 button_2.grid(row=5, column=2, columnspan=2, sticky="WE")
