@@ -126,26 +126,40 @@ def getResult():
                 eAbove.insert(0, "F")
 
 def inPowTwo():
-    eAbove.delete(0, tkinter.END)
-    first = float(e.get())**2
+    Above=eAbove.get()
+    bellow=e.get()
+    if (len(Above)>0 and len(bellow)==0 ):
+        first = float(Above)**2
+        eAbove.delete(0, tkinter.END)
+    else:
+        eAbove.delete(0, tkinter.END)
+        first = float(bellow) ** 2
     eAbove.insert(0, first)
     e.delete(0, tkinter.END)
 
 def sqrtOf():
+    if (len(eAbove.get()) > 0 and len(e.get()) == 0):
+        valueToWorkOn=eAbove.get()
+    else:
+        valueToWorkOn=e.get()
     eAbove.delete(0, tkinter.END)
-    if float(e.get())<0:
+    if float(valueToWorkOn)<0:
         sqrtOfNegativeNum()
     else:
-        first = math.sqrt(float(e.get()))
+        first = math.sqrt(float(valueToWorkOn))
         eAbove.insert(0, first)
         e.delete(0, tkinter.END)
 
 def oneDivided():
+    if (len(eAbove.get()) > 0 and len(e.get()) == 0):
+        valueToWorkOn=eAbove.get()
+    else:
+        valueToWorkOn=e.get()
     eAbove.delete(0, tkinter.END)
-    if e.get()=="0":
+    if valueToWorkOn=="0":
         errorDivisionBy0()
     else:
-        first = 1/float(e.get())
+        first = 1/float(valueToWorkOn)
         eAbove.insert(0, first)
         e.delete(0, tkinter.END)
 
