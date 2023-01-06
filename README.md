@@ -1,6 +1,6 @@
 # Python-Calculator (Tkinter)
 
-Top and Middle part of application can do opertions on numbers and bottom part on Boolean (true and false) values
+Top and Middle part of application can do operations on numbers and bottom part on Boolean (true and false) values
 
 ## Screenshot
 
